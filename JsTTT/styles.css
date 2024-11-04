@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: url("/img/knife.png");
+    background-repeat :no-repeat;
+    position:relative;
+}
+.letter {
+    font-size: 50vh;  /* Set font size to 50% of viewport height */
+    display: flex;    /* Hide by default */
+    text-align: center;
+    justify-content:center;
+    opacity: 0;
+    transition: transform 2s ease ,opacity 0.5s ease;
+    position:absolute;
+    align-items: center;
+    margin: auto;
+  }
+h1 {
+    margin-bottom: 20px;
+}
+
+.game-board {
+    display: flex;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(187, 142, 120);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    cursor: pointer;
+
+}
+
+#gameStatus {
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+
+#restartBtn {
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: url("/img/knife.png"),grabbing;
+}
